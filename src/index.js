@@ -10,6 +10,8 @@ const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 client.commands = new Collection();
 client.buttons = new Collection();
 
+require('./utils/connectDatabase');
+
 registerEvents(client);
 registerCommands(client);
 registerButtons(client);
