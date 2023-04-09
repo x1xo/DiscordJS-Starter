@@ -14,5 +14,5 @@ This is a starter template for Discord.js v14.
 3. Build the Docker image using `docker build -t image-name .` (dot is very important).
 4. Deploy the Docker image using `docker run -itd image-name`.
 
-If you don't have Docker installed on your machine, run the following command:
+If you don't have Docker installed on your machine, run the following command:\
 `curl -sSL https://get.docker.com | sh`
