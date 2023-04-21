@@ -7,8 +7,10 @@ function registerSlashCommands(client, dir="/../commands"){
     const commandEntries = fs.readdirSync(commandsPath);
     for(const entry of commandEntries) { 
         //check for subfolders
-        if(entry.split(".").length <= 1 || !entry.endsWith('.js')) 
-            registerSlashCommands(client, path.join(commandsPath, entry));
+        if(entry.split(".").length <= 1 || !entry.endsWith('.js')) {
+            registerSlashCommands(client, `${dir}/${entry}`);
+            continue;
+        }
         //register the command
         const filePath = path.join(commandsPath, entry);
         const command = require(filePath);
